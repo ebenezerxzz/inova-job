@@ -1,18 +1,26 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 
-export default function InitialScreen() {
+import { LogoComponent } from '../src/components/InitialScreen/LogoImages'
+import { InputsInitialScreen } from '../src/components/InitialScreen/Inputs'
+
+const { width, height } = Dimensions.get('window');
+
+export const InitialScreen = () => {
     return (
         <View style={styles.globalContainer}>
-            <Text>
-                InitialScreen
-            </Text>
+            <View>
+                <LogoComponent />
+                <InputsInitialScreen />
+            </View>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
     globalContainer: {
         flex: 1,
+        width: width * 1,
+        height: height  * 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#1d3659'
@@ -22,6 +30,11 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: 'bold',
         justifyContent: 'center',
-        alignItems: 'center'        
+        alignItems: 'center'
+    },
+    titleInova: {
+        display: 'flex',
+        width: 180,
+        height: 180
     }
 })

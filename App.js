@@ -6,7 +6,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <InitialScreen />
-      <StatusBar style="auto" />
+      <StatusBar 
+        backgroundColor='transparent'
+        style="light-content" 
+        translucent={true}
+      />
     </View>
   );
 }
