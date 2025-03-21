@@ -4,38 +4,34 @@ const { width, height } = Dimensions.get('window')
 
 export const LogoComponent = () => {
     return (
-        <View style={styles.globalContainer}>
+        <View style={styles.container}>
             <Image
                 resizeMode='contain'
-                style={styles.titleInova}
+                style={styles.logoImg}
                 source={require('../../../src/images/logoLogin.png')}
-            />
+                />
             <Image
-                source={require('../../images/businessman.gif')}
                 resizeMode='contain'
+                source={require('../../images/businessman.png')}
                 style={styles.image}
-            />
+                />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    globalContainer: {
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
+    container: {
+        flex: 0.5,
+        justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '10%'
     },
-    titleInova: {
-        display: 'flex',
-        width: 280,
-        height: 280
+    logoImg: {
+        flex: 1,
+        width: width * 0.5,
     },
     image: {
-        display: 'flex',
-        borderRadius: 500,
-        width: width * 0.50,
-        height: width  * 0.50
+        flex: 1,
+        width: width * 1,
+        marginTop: '-20%'
     }
 })
